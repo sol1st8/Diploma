@@ -39,3 +39,9 @@
 
 # debug information files
 *.dwo
+*/build
+*c_cpp_properties.json
+*launch.json
+*settings.json
+*events.log
+*.bin
