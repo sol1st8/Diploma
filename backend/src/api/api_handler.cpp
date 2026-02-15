@@ -232,7 +232,7 @@ void ApiHandler::HandleSimulateCalls() {
                 if (call_count <= 0 || call_count > cfg->max_calls_per_request) {
                     LOG_WARNING("Invalid call count requested: " + std::to_string(call_count));
                     return SendBadRequestResponse(
-                        "Count must be between 1 and "s + std::to_string(cfg->max_calls_per_request)
+                        "Значение должно быть между 1 и "s + std::to_string(cfg->max_calls_per_request)
                     );
                 }
             }

@@ -54,7 +54,6 @@ struct ServerInfo {
     int id;
     int hub_id;
     std::string name;
-    std::string ip_address;
     bool is_active;
 
     friend void tag_invoke(json::value_from_tag, json::value& jv,
@@ -63,7 +62,6 @@ struct ServerInfo {
             {"id"s, server.id},
             {"hub_id"s, server.hub_id},
             {"name"s, server.name},
-            {"ip_address"s, server.ip_address},
             {"is_active"s, server.is_active}
         };
     }
@@ -75,7 +73,6 @@ struct ServerInfo {
         serv_info.id = server.at("id").as_int64();
         serv_info.hub_id = server.at("hub_id").as_int64();
         serv_info.name = server.at("name").as_string();
-        serv_info.ip_address = server.at("ip_address").as_string();
         serv_info.is_active = server.at("is_active").as_bool();
 
         return serv_info;

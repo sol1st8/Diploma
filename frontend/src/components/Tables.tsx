@@ -64,7 +64,6 @@ export function Tables() {
               <th>ID</th>
               <th>ID хаба</th>
               <th>Название</th>
-              <th>IP адрес</th>
               <th>Статус</th>
             </tr>
           </thead>
@@ -74,7 +73,6 @@ export function Tables() {
                 <td>{server.id}</td>
                 <td>{server.hub_id}</td>
                 <td>{server.name}</td>
-                <td>{server.ip_address}</td>
                 <td>
                   <span className={`badge ${server.is_active ? 'active' : 'inactive'}`}>
                     {server.is_active ? 'Активен' : 'Неактивен'}

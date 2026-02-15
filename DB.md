@@ -33,7 +33,6 @@ CREATE TABLE server (
     id INT PRIMARY KEY,
     hub_id INT NOT NULL,
     name VARCHAR(100) NOT NULL,
-    ip_address VARCHAR(15),
     is_active BOOLEAN DEFAULT TRUE,
     
     FOREIGN KEY (hub_id) REFERENCES hub(id)
@@ -44,7 +43,6 @@ CREATE TABLE server (
 - `id` - идентификатор сервера
 - `hub_id` - ссылка на хаб (FK)
 - `name` - название сервера
-- `ip_address` - IP-адрес сервера
 - `is_active` - активен ли сервер
 
 ---

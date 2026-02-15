@@ -36,12 +36,12 @@ std::vector<ui::detail::ServerInfo> ServerRepositoryImpl::Get() const {
 
     std::string query = "SELECT * FROM server ORDER BY id;"s;
 
-    auto resp = tr.query<int, int, std::string, std::string, bool>(query);
+    auto resp = tr.query<int, int, std::string, bool>(query);
 
     std::vector<ui::detail::ServerInfo> result;
 
-    for (const auto& [id, hub_id, name, ip_address, is_active] : resp) {
-        ui::detail::ServerInfo server{id, hub_id, name, ip_address, is_active};
+    for (const auto& [id, hub_id, name, is_active] : resp) {
+        ui::detail::ServerInfo server{id, hub_id, name, is_active};
         result.push_back(server);
     }
 
