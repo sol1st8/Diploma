@@ -412,9 +412,9 @@ void ApiHandler::HandleSyncFull() {
         if (success) {
             json::value response = {
                 {"success"s, true},
-                {"message"s, "Full synchronization initiated successfully"s},
+                {"message"s, "Полная синхронизация успешно запущена"s},
                 {"server_id"s, server_id},
-                {"note"s, "All tables will be synchronized to the target server"s}
+                {"note"s, "Все таблицы были успешно синхронизированы"s}
             };
             return SendOkResponse(json::serialize(response));
         } else {
